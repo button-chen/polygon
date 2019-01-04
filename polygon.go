@@ -76,6 +76,7 @@ func (this *Polygon) polygonIsectLine(p1, p2, pos Point, winding *int) {
 	} else if y2 < y1 {
 		x1, x2 = x2, x1
 		y1, y2 = y2, y1
+		dir = -1
 	}
 	if y >= y1 && y < y2 {
 		x := x1 + ((x2-x1)/(y2-y1))*(y-y1)
